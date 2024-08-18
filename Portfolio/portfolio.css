@@ -6,140 +6,146 @@
 }
 body{
   background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 html{
   scroll-behavior: smooth;
 }
 header{
   width : 100%;
-  display : flex;
-  justify-content: space-between;
-  align-items: center;
-  padding : 10px 10px;
   color : #fff;
   background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
   position : fixed;
   z-index : 9999;
-}
-header ul li {
-  list-style: none;
-  display: inline-block;
-  margin : 20px;
-}
-header ul li a{
-  color : #ffffff;
-  text-decoration: none;
-  font-size : 20px;
-  transition: all 0.3s ease-in-out;
-}
-header ul li a:hover{
-  font-size : 25px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-section{
-  width :  100%;
-  float : left;
-  height  : 100vh;
-  position : relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 nav{
   display : flex;
   width : 100%;
+  height : 5vw;
   justify-content: space-between;
   align-items: center;
 }
-.leftSide{
-  width  :40%;
+ nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin : 1vw;
+}
+nav ul li a{
+  color : #ffffff;
+  text-decoration: none;
+  font-size : 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover{
+  font-size : 1.75rem;
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 }
 .rightSide{
-  width : 40%
+  width : 40%;
 }
-.rightSide i{
-  font-size: 30px;
+.rightSide a{
+  font-size: 2rem;
   margin: 5%;
   color: #fff;
   position: relative;
   left : 40%;
   transition: all 0.2s ease-in-out;
 }
-.rightSide i:hover{
-  font-size : 38px;
-
+.rightSide a:hover{
+  font-size : 2.5rem;
 }
-.hamburger-menu{
-  display: none;
-  cursor: pointer;
+
+section{
+  width :  100%;
+  height  : 100vh;
+  position : relative;
 }
 
 #home {
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s ease-in-out;
 }
-
-.home-container {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.left-container {
   color : white;
   text-align: left;
 }
 #home .hello{
   color: white; 
-  width : 200px;
+  width : 12vw;
   background-color: orange; 
-  font-size: 35px;
-  padding : 15px;
-  border-radius: 5%;
+  font-size: 2rem;
+  padding : 1rem;
+  border-radius: 10px;
+  margin : 0.8rem 0;
 }
-
+#home .name{
+  font-size: 3.2rem;
+  margin : 0.8rem 0;
+}
+#home .profile{
+  font-size: 1.5rem; 
+  margin : 0.8rem 0;
+}
 .social-media {
-  margin-top: 20px;
+  margin-top: 1rem;
 }
 
 .social-media a {
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 
 .social-media i {
-  font-size :30px;
-  margin : 5px;
+  font-size : 2rem;
+  margin :0.5rem;
   color: #ffffff;
 }
-.social-media i:hover{
-  font-size : 38px;
-}
-
 #home .btn {
   color: white; 
   background-color: orange; 
-  padding: 10px 20px; 
-  border: none; 
-  font-size : 20px;
+  padding: 1rem 1.2rem; 
+  font-size : 1.2rem;
   border-radius: 5px; 
   cursor: pointer;
-  margin: 20px 10px;
+  margin-top : 1rem;
+  margin-right : 1rem;
 }
 #home .btn:hover{
   color: orange; 
   background-color: white; 
 }
+
 #about{
-  padding : 65px 0px;
+  padding : 4rem 0;
 }
+
 .about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin : 10px;
+  padding: 0.8rem;
+  margin : 1rem;
 
 }
 
 .about-image {
-  height : 12%;
-  width: 12%;
-  margin-right: 20px;
+  height : 15%;
+  width: 15%;
+  margin-right: 1.5rem;
 }
 
 .about-image img {
@@ -160,8 +166,8 @@ nav{
   height : 50%;
 }
 #about h1{
-  margin-top : 50px;
-  font-size : 50px;
+  margin-top : 3rem;
+  font-size : 4rem;
   text-align : center;
   color : white;
 }
@@ -176,17 +182,17 @@ nav{
 .about-text p {
   color : white;
   text-align: center;
-  font-size: 25px;
+  font-size: 1.5rem;
   line-height: 1.5;
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 #about a{
   color : white;
   font-size: 1.5rem;
   text-decoration: none;
   background-color: rgb(255, 172, 18);
-  padding : 20px;
-  border-radius: 10%;
+  padding : 1.2rem;
+  border-radius: 10px;
   transition: all 0.2s ease-in-out;
 }
 #about a:hover{
@@ -195,19 +201,19 @@ nav{
 }
 #skills{
   color : white;
-  padding: 100px 0;
+  padding: 8rem 0;
  
 }
 #skills h2{
   color : white;
-  margin-top:30px;
+  margin-top:2rem;
   text-align: center;
   font-size : 3rem;
   
 }
 .skills-container {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 3rem auto;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -218,43 +224,43 @@ nav{
 .skill-category {
   display: flex;
   flex-direction: row;
-  margin: 20px;
-  padding: 20px;
+  margin: 1.5rem;
+  padding: 1.5rem;
   border: 1px solid #ffffff;
-  box-shadow: 0 0 10px rgba(226, 226, 226, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.512);
 }
 
 .skill-category ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .skill-category li {
   display: flex;
   flex-direction: row;
-  margin: 30px 30px;
+  margin: 1rem 1.5rem;
   transition: box-shadow 0.2s ease-in-out;
 }
 .skill-category li:hover{
+  border-radius: 10px;
   box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
   color : rgba(255, 172, 18, 0.781);
 }
 
 
 .skill-category li i {
-  font-size: 28px;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-right: 1rem;
   color : white;
   transition: font-size 0.2s ease-in-out;
 }
 .skill-category li span {
-  font-size: 30px;
+  font-size: 2rem;
 }
+
 #projects{
-  padding : 100px 0;
+  padding : 5vw 0;
 }
 #projects h1{
   color : white;
@@ -317,15 +323,30 @@ nav{
   background-color : white;
   color : #007bff;
 }
-
+.project-btn{
+  font-size: 1.2rem;
+  color : white;
+  background-color: orange;
+  padding : 1rem;
+  border-radius: 10px;
+}
+.project-btn:hover{
+  color : orange;
+  background-color: #fff;
+}
 #contactUs {
-  padding: 130px 0;
+  padding: 9rem ;
   text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.611);
+  align-items: center;
 }
 
 #contactUs h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 3vw;
+  margin-bottom: 1rem;
   color :#fff
 }
 
@@ -338,6 +359,9 @@ nav{
 #contactUs form {
   max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.452);
   padding: 10px 30px;
   border-radius: 10px;
@@ -346,7 +370,7 @@ nav{
   }
 
 #contactUs form label {
-  display: block;
+  width : 100%;
   margin-bottom: 10px;
 }
 
@@ -360,6 +384,8 @@ nav{
 #contactUs form button[type="submit"] {
   background-color: rgb(165, 3, 165);
   color: #fff;
+  width  :100%;
+  padding :10px;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -389,7 +415,7 @@ nav{
   color: #ffffffb7;
 }
 footer {
-  background-color: #000861;
+  background-color: #000110;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -420,89 +446,111 @@ footer a {
 footer a:hover {
   color: #ccc;
 }
-/* Responsiveness for phone max-width : 480px */
-@media only screen and (max-width: 480px) {
-  header {
-    height: 60px;
+/* Responsiveness for phone max-width : 500px */
+@media only screen and (max-width: 500px) {
+  .rightSide{
+    display:none;
   }
-  nav {
+  nav{
+    height : 20vw;
+  }
+  nav ul li{
+    margin : 2.5vw;
+  }
+  nav ul li a{
+    font-size : 1rem;
+  }
+  nav ul li a:hover{
+    font-size : 1.25rem;
+  }
+  
+  #home .hello{
+    width : 38vw;
+    font-size : 1.5rem;
+    margin : 0.8rem 1.5rem;
+      }
+  #home .name{
+    font-size : 2.2rem;
+    margin : 0.8rem 1.5rem;
+  }
+  #home .profile{
+    font-size : 1rem;
+    margin: 0.8rem 1.5rem; 
+  }
+  .social-media i{
+    margin: 0.8rem;
+  } 
+  .social-media i:hover{
+    font-size : 22px;
+  }
+  #home .btn{
+    font-size : 1rem;
+    margin : 1rem 0  0 1.5rem;
+  }
+  .about-image {
+    height : 20%;
+    width : 50%;
+  }
+  .about-text p{
+    font-size : 0.8rem;
+  }
+  #about h1{
+    font-size : 3rem;
+  }
+  #about a{
+    font-size : 1rem;
+    margin : 0.2rem 0;
+    padding : 1rem;;
+  }
+  #skills{
+    display : flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
-  nav ul {
-    flex-direction: column;
+  .skills-container{
+    margin : 0.8rem;
   }
-  nav li {
-    margin-bottom: 10px;
+  #skills h2{
+    font-size : 2rem;
+    margin : 20px 0;
   }
-  .leftSide {
+  .skill-category li{
+    margin : 0.5rem;
+  }
+  
+  .skill-category li i{
+    font-size : 10px;
+    margin-right : 3px;
+  }
+
+  .skill-category li span{
+    font-size : 10px;
+  }
+  .project-card:nth-child(1),
+  .project-card:nth-child(2),
+  .project-card:nth-child(4) {
     display: none;
-  }
-  .rightSide {
-    display: none;
-  }
-  .hamburger-menu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  .hamburger-menu i {
-    font-size: 24px;
-  }
-  main {
-    padding: 20px;
-  }
-  section {
-    padding: 20px;
-  }
-  .project-card {
-    flex-direction: column;
-  }
-  .project-image {
-    width: 100%;
-    height: 150px;
-  }
-  .project-content {
-    padding: 20px;
-  }
 }
-/*responsiveness for tablet max-width : 768px */ 
-@media only screen and (max-width: 768px) {
-  header {
-    height: 80px;
-  }
-  nav {
-    flex-direction: row;
-  }
-  nav ul {
-    flex-direction: row;
-  }
-  nav li {
-    margin-right: 20px;
-  }
-  .leftSide {
-    display: block;
-  }
-  .rightSide {
-    display: block;
-  }
-  .hamburger-menu {
-    display: none;
-  }
-  main {
-    padding: 30px;
-  }
-  section {
-    padding: 30px;
-  }
-  .project-card {
-    flex-direction: row;
-  }
-  .project-image {
-    width: 40%;
-    height: 200px;
-  }
-  .project-content {
-    padding : 20px
-  }
+#contactUs {
+  padding: 80px 0;
+  box-shadow : none;
+}
+#contactUs h1{
+  font-size:10vw;
+}
+#contactUs form {
+  margin : 0 2rem;
+}
+#contactUs label {
+  margin-bottom: 2px;
+}
+#contactUs input[type="text"], #contactUs input[type="email"], #contactUs textarea {
+  margin-bottom: 5px;
+}
+#contactUs button[type="submit"] {
+  width: 100%;
+  padding: 5px;
+}
 }
