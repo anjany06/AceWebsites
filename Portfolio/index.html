@@ -14,6 +14,7 @@
   <body>
     <header>
       <nav>
+        <div class="navbar">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -21,6 +22,20 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contactUs">Contact Me</a></li>
           </ul>
+        </div>
+        <button class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contactUs" class="nav-link">Contact Me</a></li>
+          </ul>
+        </div>
+          
         <div class="rightSide">
           <a href="https://www.instagram.com/subham_pvt09/"
             ><i class="fa-brands fa-instagram"></i
@@ -42,12 +57,12 @@
     </video>
     <main>
 
-      <section id="home">
+      <section id="home" class="show-animate">
         <div class="left-container">
-          <h2 class="hello">Hello I'm</h2>
-          <h1 class="name">Anjany Pandey</h1>
-          <h3 class ="profile">Front-end Developer | Web Designer | Passionate Coder</h3>
-          <div class="social-media">
+          <h2 class="hello animate">Hello I'm</h2>
+          <h1 class="name animate">Anjany Pandey</h1>
+          <h3 class ="profile animate">Front-end Developer | Web Designer | Passionate Coder</h3>
+          <div class="social-media animate">
             <a href="https://www.instagram.com/subham_pvt09/">
               <i class="fa-brands fa-instagram"></i>
             </a>
@@ -61,17 +76,17 @@
               <i class="fa-brands fa-square-github"></i>
             </a>
           </div>
-          <a href="#about"><button class="btn">See more about me</button></a>
-          <a href="#skills"><button class="btn">My Skills</button></a>
-          <a href="#projects"><button class="btn">My Projects</button></a>
+          <a href="#about"><button class="btn animate">See more About me</button></a>
+          <a href="#skills"><button class="btn animate">My Skills</button></a>
+          <a href="#projects"><button class="btn animate">My Projects</button></a>
         </div>
       </section>
 
       <section id="about">
-        <h1>About <span id="me">Me</span></h1>
+        <h1 class="animate">About <span id="me">Me</span></h1>
         <div class="about-container">
           <div class="about-image-border"></div>
-          <div class="about-image">
+          <div class="about-image animate">
             <img src="pic2.jpg" alt="my pic" />
           </div>
           <div class="about-text">
@@ -86,15 +101,15 @@
               applications.
             </p>
           </div>
-          <a href="#contactUs">Contact Me</a>
+          <a href="#contactUs" class="animate">Contact Me</a>
         </div>
       </section>
 
 
       <section id="skills">
-        <h2> My <span id="me">Skills</span></h2>
+        <h2 class="animate"> My <span id="me">Skills</span></h2>
         <div class="skills-container">
-          <div class="skill-category">
+          <div class="skill-category animate">
             <ul>
               <li>
                 <i class="fab fa-html5"></i>
@@ -119,7 +134,7 @@
                 <div class="dropdown">
                 <span>JavaScript</span>
                 <div class="dropdown-content">
-                  <span>69%</span>
+                  <span>70%</span>
                 </div>
               </div>
               </li>
@@ -128,7 +143,7 @@
                 <div class="dropdown">
                 <span>PHP</span>
                 <div class="dropdown-content">
-                  <span>69%</span>
+                  <span>70%</span>
                 </div>
               </div>
               </li>
@@ -142,14 +157,14 @@
               </li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-category animate">
             <ul>
               <li>
                 <i class="fab fa-react"></i>
                 <div class="dropdown">
                 <span>React</span>
                 <div class="dropdown-content">
-                  <span>55%</span>
+                  <span>70%</span>
               </div>
               </div>
               </li>
@@ -302,5 +317,6 @@
         <li><a href="#contactUs">Contact Me</a></li>
       </ul>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -35,6 +35,7 @@ header{
   background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
   position : fixed;
   z-index : 9999;
+  border-bottom : 2px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 nav{
@@ -140,6 +141,16 @@ section{
 #home .btn:hover{
   color: orange; 
   background-color: white; 
+}
+.nav-menu{
+  display : none;
+}
+.hamburger{
+  display : none;
+  cursor: pointer;
+  padding : 0.8rem;
+  border :none;
+  background-color: transparent;
 }
 
 #about{
@@ -314,6 +325,7 @@ section{
 
 #projects{
   padding : 5vw 0;
+  height : fit-content;
 }
 #projects h1{
   color : white;
@@ -333,9 +345,10 @@ section{
   margin: 60px;
   height : 350px;
   width:300px;
-  background-color: #d6d6d6;
+  background-color: #E4D6F5;
   border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 60px #00000041,
+  inset -20px -20px 60px #ffffff40;
   transition: all 0.2s ease-in-out;
 }
 .project-card:hover{
@@ -411,6 +424,7 @@ section{
 }
 
 #contactUs form {
+  color : white;
   max-width: 500px;
   margin: 0 auto;
   display: flex;
@@ -473,7 +487,8 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-  clear: both;
+  border-top : 2px solid white;
+  width : 100%;
 }
 
 footer p {
@@ -500,8 +515,29 @@ footer a {
 footer a:hover {
   color: #ccc;
 }
+section .animate{
+  transition: 1s;
+}
+#home .animate{
+  transform: translateX(-40%);
+}
+#home.show-animate .animate{
+  transform: translateX(0);
+}
+#about .animate{
+  transform: translateX(-50%);
+}
+#about.show-animate .animate{
+  transform: translateX(0);
+}
+#skills .animate{
+  transform: scale(.7);
+}
+#skills.show-animate .animate{
+  transform: scale(1);
+}
 /* Responsiveness for phone max-width : 500px */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .rightSide{
     display:none;
   }
@@ -517,8 +553,49 @@ footer a:hover {
   nav ul li a:hover{
     font-size : 1.25rem;
   }
-  
-  
+  .navbar{
+    display : none;
+  }
+  .hamburger{
+    display : block;
+    color : white;
+    font-size : 2.5rem;
+  }
+  .nav-menu{
+    display : block;
+    position : absolute;
+    top: 80px;
+    left: -1500px;
+    width: 100%;
+    color : white;
+    background-image: linear-gradient( 91.2deg,  rgba(136,80,226,1) 4%, rgba(16,13,91,1) 96.5% );
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-menu.active{
+    left : 0;
+  }
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-menu li {
+    margin-bottom: 10px;
+  }
+  .nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .nav-menu a:hover {
+    color: #5c5c5c;
+    font-size : 2rem;
+  }
+  .hamburger:checked + .nav-menu {
+  display: block;
+}
   #home .hello{
     width : 38vw;
     font-size : 1.5rem;
@@ -586,11 +663,6 @@ footer a:hover {
     font-size : 10px;
     flex : 1;
   }
-  .project-card:nth-child(1),
-  .project-card:nth-child(2),
-  .project-card:nth-child(4) {
-    display: none;
-}
 #contactUs {
   padding: 80px 0;
   box-shadow : none;
