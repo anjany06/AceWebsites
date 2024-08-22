@@ -116,6 +116,7 @@ section{
   animation : fadeIn 3s ease-in-out;
 }
 .social-media {
+  display: flex;
   margin-top: 1rem;
   animation : fadeIn 3.2s ease-in-out;
 }
@@ -291,7 +292,7 @@ section{
 }
 .skill-category li:hover{
   border-radius: 10px;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.771);
   color : rgba(255, 172, 18, 0.781);
 }
 
@@ -441,7 +442,7 @@ section{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.452);
+  background-color: rgba(255, 255, 255, 0.273);
   padding: 10px 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -530,13 +531,13 @@ section .animate{
   transition: 1s;
 }
 #home .animate{
-  transform: translateX(-40%);
+  transform: translateX(-80%);
 }
 #home.show-animate .animate{
   transform: translateX(0);
 }
 #about .animate{
-  transform: translateX(-20%);
+  transform: translateX(-80%);
 }
 #about.show-animate .animate{
   transform: translateX(0);
@@ -548,7 +549,7 @@ section .animate{
   transform: scale(1);
 }
 /* Responsiveness for phone max-width : 500px */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
   .rightSide{
     display:none;
   }
@@ -656,7 +657,7 @@ section .animate{
     margin : 0.8rem;
   }
   #skills h2{
-    font-size : 2rem;
+    font-size : 2.5rem;
     margin : 20px 0;
   }
   .skill-category li{
@@ -706,10 +707,94 @@ section .animate{
   }
 }
 
-/* For tablet devices (min-width: 769px) and (max-width: 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 750px) and (max-width: 1100px) {
+  /* Increase font size and line height */
   #bg-video {
     height: 100vh;
     object-position: center;
+  }
+  nav{
+    height : 10vh;
+  }
+  .rightSide{
+    display: none;
+  }
+  #home .hello{
+    width : 27vw;
+    font-size : 2.5rem;
+    margin : 1rem 2rem;
+      }
+  #home .name{
+    font-size : 3.5rem;
+    margin : 1rem 2rem;
+  }
+  #home .profile{
+    font-size : 1.5rem;
+    margin : 1rem 2rem;
+  }
+  .social-media i{
+    margin: 1rem;
+  } 
+  .social-media i:hover{
+    font-size : 22px;
+  }
+  #home .btn{
+    font-size : 2rem;
+    margin : 1.5rem 0  0 1.5rem;
+  }
+  .about-image {
+    height : 20%;
+    width : 40%;
+  }
+  #skills{
+    display : flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills-container{
+    margin : 1.5rem;
+  }
+  #skills h2{
+    font-size : 5rem;
+    margin : 20px 0;
+  }
+  .skill-category li{
+    display: flex;
+    align-items: center;
+    margin : 1rem;
+  }
+  
+  .skill-category li i{
+    font-size : 20px;
+    margin-right : 10px;
+  }
+
+  .skill-category li span{
+    font-size : 20px;
+    flex : 1;
+  }
+  .project-btn{
+    left :40%;
+  }
+  #projects h1{
+    font-size: 5rem;
+  }
+  #contactUs h1{
+    font-size:6vw;
+  }
+  #contactUs form {
+    margin : 0 3rem;
+  }
+  #contactUs label {
+    margin-bottom: 2px;
+  }
+  #contactUs input[type="text"], #contactUs input[type="email"], #contactUs textarea {
+    margin-bottom: 5px;
+  }
+  #contactUs button[type="submit"] {
+    width: 100%;
+    padding: 5px;
   }
 }
