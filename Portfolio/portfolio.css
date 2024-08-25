@@ -364,8 +364,6 @@ section{
   object-fit: cover;
   background-size: cover;
   background-position: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .project-content {
@@ -464,7 +462,6 @@ section{
   background-color: rgb(165, 3, 165);
   color: #fff;
   width  :100%;
-  padding :10px;
   padding: 10px 10px;
   border: none;
   border-radius: 20px;
@@ -547,10 +544,13 @@ section .animate{
 #skills.show-animate .animate{
   transform: scale(1);
 }
-/* Responsiveness for phone max-width : 500px */
+/* Responsiveness for phone max-width : 750px */
 @media only screen and (max-width: 750px) {
   .rightSide{
     display:none;
+  }
+  .right-container{
+    display: none;
   }
   nav{
     height : 20vw;
@@ -701,7 +701,6 @@ footer{
   width : 100%;
 }
 }
-/* For mobile devices (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   #bg-video {
     height: 100vh;
@@ -710,7 +709,7 @@ footer{
 }
 
 @media only screen and (min-width: 750px) and (max-width: 1100px) {
-  /* Increase font size and line height */
+
   #bg-video {
     height: 100vh;
     object-position: center;
@@ -719,6 +718,9 @@ footer{
     height : 10vh;
   }
   .rightSide{
+    display: none;
+  }
+  .right-container{
     display: none;
   }
   #home .hello{
